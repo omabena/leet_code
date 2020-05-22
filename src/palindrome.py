@@ -9,6 +9,8 @@ class Solution(object):
         return self._window_strategy(s)
     
     def _is_palindrome(self, s):
+        if len(s) > 1 and s[-1] != s[0]:
+            return False
         return s[::-1] == s
 
 
@@ -28,7 +30,7 @@ class Solution(object):
             window = s[i:j]
             if len(output) > len(window):
                 break
-
+            
             if (self._is_palindrome(window)
                 and len(window) > len(output)):
                 output = window
