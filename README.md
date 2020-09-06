@@ -15,6 +15,11 @@ Create virtual env
 ~ source venv/bin/activate
 ```
 
+## Development
+```
+python3 setup develop
+```
+
 ## Install project to have all modules available
 ```
 ~ pip install e .
